@@ -8,66 +8,75 @@
 
 import UIKit
 
+
 enum ConstraintType: String {
     case Size = "size"
     case Margin = "margin"
-    case Center = "center"
 }
 
 public struct Constraint {
 
+    /// What type of Constraint it is. Can be `.Size`, `.Margin`, or `.Center`
     var type: ConstraintType
-    var constraintJson: JSON
-    typealias AttributeTuple = (value: NSNumber, attribute: NSLayoutAttribute, isColumn: Bool)
-    var attributes: [AttributeTuple]
 
+    /// Contains the all the raw json for `Constraint` object
+    var constraintJson: JSON!
+
+    /// The attributes for the Constraint. Example: `"h": 100`
+    var attributes: [Attribute]?
+
+    
     init?(json: JSON) {
 
-        guard let constraintType = ConstraintType(rawValue: json["type"].stringValue) else {
-            return nil
-        }
+        guard let constraintType = ConstraintType(rawValue: json["type"].stringValue) else { return nil }
 
-        let constraintDict: [String : NSLayoutAttribute] = [
-            "w" : .width, "h" : .height, "l" : .left,
-            "t" : .top, "r" : .right, "b" : .bottom,
-            "x" : .centerX, "y" : .centerY,
-            "col": .width
-        ]
-
-        constraintJson = json
         type = constraintType
-
-        attributes = json.dictionaryObject!.flatMap({ (key, value) in
-            guard let attribute = constraintDict[key] else { return nil }
-            return AttributeTuple(value as! NSNumber, attribute, key == "col")
-        })
+        constraintJson = json
+        
+        attributes = constraintJson.dictionaryObject!.flatMap(Attribute.init)
     }
 
-    static func add<T: UIView>(_ constraint: AttributeTuple, toParent parent: inout TalanaStackView, fromChild child: inout T) {
+    
+    /// Add constraint to a parent(`TalanaStackView`) object from a child(`Component` or `TalanaStackView`)
+    ///
+    /// - parameter attr:   Attribute object that we're apply to the parent/child views
+    /// - parameter parent: TalanaStackView object
+    /// - parameter child:  Generic object that must be a subclass of `Component`
+    static func addConstraint<T: Component>(using attr: Attribute, toParent parent: inout TalanaStackView, fromChild child: inout T) {
 
-        let isSize = [.height].contains(constraint.attribute)
-        var value = CGFloat(constraint.value)
-        var multi:CGFloat = 1.0
-        if constraint.isColumn {
-            multi = value.columns(in: parent)
-            value = 0
+        var item: TalanaStackView? = parent;
+        var multiplier: CGFloat = 1.0
+        
+        if attr.type.layoutAttr() == .height {
+            item = nil
+        }
+        if attr.type == .col {
+            multiplier = attr.rawValue.columns(in: parent)
         }
         
-        parent.addConstraint(NSLayoutConstraint(item: child,
-                    attribute: constraint.attribute,
-                    relatedBy: .equal,
-                    toItem: !isSize ? parent: nil,
-                    attribute: constraint.attribute,
-                    multiplier: multi,
-                    constant: value))
+        let constraint = NSLayoutConstraint(item: child,
+                                            attribute: attr.type.layoutAttr(),
+                                            relatedBy: attr.relation,
+                                            toItem: item,
+                                            attribute: attr.type.layoutAttr(),
+                                            multiplier: multiplier,
+                                            constant: attr.constant)
+
+        parent.addConstraint(constraint)
     }
+
     
-    static func add<T: UIView>(_ constraints: [Constraint], toParent parent: inout TalanaStackView, fromChild child: inout T) {
+    /// Add array of `Constraint` to a parent(`TalanaStackView`) object from a child(`Component` or `TalanaStackView`)
+    ///
+    /// - parameter constraints: Array of `Constraint`
+    /// - parameter parent:      TalanaStackView Object
+    /// - parameter child:       Generic object that must be a subclass of `Component`
+    static func add<T: Component>(_ constraints: [Constraint], toParent parent: inout TalanaStackView, fromChild child: inout T) {
         child.translatesAutoresizingMaskIntoConstraints = false
         parent.addArrangedSubview(child)
-        
+
         constraints.forEach { c in
-            c.attributes.forEach() { add($0, toParent: &parent, fromChild: &child) }
+            c.attributes?.forEach() { addConstraint(using: $0, toParent: &parent, fromChild: &child) }
         }
     }
 }

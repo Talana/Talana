@@ -11,9 +11,10 @@
 		315EA44A1D9F3B3800C69190 /* Lana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4431D9F3B3800C69190 /* Lana.swift */; };
 		315EA44B1D9F3B3800C69190 /* LanaAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4441D9F3B3800C69190 /* LanaAlignment.swift */; };
 		315EA44C1D9F3B3800C69190 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4451D9F3B3800C69190 /* SwiftyJson.swift */; };
-		315EA44D1D9F3B3800C69190 /* Talana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4461D9F3B3800C69190 /* Talana.swift */; };
 		315EA44E1D9F3B3800C69190 /* TalanaConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */; };
 		315EA44F1D9F3B3800C69190 /* TalanaStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4481D9F3B3800C69190 /* TalanaStackView.swift */; };
+		316B8ED11DA0819000502B4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316B8ED01DA0819000502B4C /* Constants.swift */; };
+		319F12C11DA02F6A00DDC0F2 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F12C01DA02F6A00DDC0F2 /* Attribute.swift */; };
 		31EA34BC1D9E92C200C12165 /* Talana.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EA34BA1D9E92C200C12165 /* Talana.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,10 +47,11 @@
 		315EA4431D9F3B3800C69190 /* Lana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lana.swift; sourceTree = "<group>"; };
 		315EA4441D9F3B3800C69190 /* LanaAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanaAlignment.swift; sourceTree = "<group>"; };
 		315EA4451D9F3B3800C69190 /* SwiftyJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
-		315EA4461D9F3B3800C69190 /* Talana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talana.swift; sourceTree = "<group>"; };
 		315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalanaConstraint.swift; sourceTree = "<group>"; };
 		315EA4481D9F3B3800C69190 /* TalanaStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalanaStackView.swift; sourceTree = "<group>"; };
 		315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TalanaExample.xcodeproj; path = TalanaExample/TalanaExample.xcodeproj; sourceTree = "<group>"; };
+		316B8ED01DA0819000502B4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		319F12C01DA02F6A00DDC0F2 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		31EA34B71D9E92C100C12165 /* Talana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Talana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EA34BA1D9E92C200C12165 /* Talana.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Talana.h; sourceTree = "<group>"; };
 		31EA34BB1D9E92C200C12165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				31EA34BA1D9E92C200C12165 /* Talana.h */,
+				316B8ED01DA0819000502B4C /* Constants.swift */,
 				31EA34BB1D9E92C200C12165 /* Info.plist */,
 				315EA4451D9F3B3800C69190 /* SwiftyJson.swift */,
 				315EA4421D9F3B3800C69190 /* Extensions.swift */,
@@ -107,9 +110,9 @@
 		31EA34B91D9E92C200C12165 /* Talana */ = {
 			isa = PBXGroup;
 			children = (
+				319F12C01DA02F6A00DDC0F2 /* Attribute.swift */,
 				315EA4431D9F3B3800C69190 /* Lana.swift */,
 				315EA4441D9F3B3800C69190 /* LanaAlignment.swift */,
-				315EA4461D9F3B3800C69190 /* Talana.swift */,
 				315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */,
 				315EA4481D9F3B3800C69190 /* TalanaStackView.swift */,
 				315EA4A01D9F40CB00C69190 /* Supporting Files */,
@@ -250,8 +253,9 @@
 				315EA44B1D9F3B3800C69190 /* LanaAlignment.swift in Sources */,
 				315EA44A1D9F3B3800C69190 /* Lana.swift in Sources */,
 				315EA44E1D9F3B3800C69190 /* TalanaConstraint.swift in Sources */,
-				315EA44D1D9F3B3800C69190 /* Talana.swift in Sources */,
+				319F12C11DA02F6A00DDC0F2 /* Attribute.swift in Sources */,
 				315EA44C1D9F3B3800C69190 /* SwiftyJson.swift in Sources */,
+				316B8ED11DA0819000502B4C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

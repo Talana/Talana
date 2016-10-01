@@ -10,20 +10,23 @@ import UIKit
 
 public class TalanaStackView: UIStackView {
 
-    var gutter: CGFloat! = 0.02
+    /// Gutter for TalanaStackView.
+    var gutter: CGFloat!
 
-    var stackWidth: CGFloat! {
+    /// Width for TalanaStackView
+    var width: CGFloat! {
 
         let margin: CGFloat = layoutMargins.left + layoutMargins.right
         let width = ez.screenWidth - margin
 
         return width
     }
-
-    var lanaCol: CGFloat! {
+    
+    /// Width of a single column
+    var columnWidth: CGFloat! {
 
         let totalGutters:CGFloat = gutter * 11
-        let colWidth = (stackWidth - totalGutters)/12
+        let colWidth = (width - totalGutters)/12
 
         return colWidth
     }
@@ -42,10 +45,14 @@ public class TalanaStackView: UIStackView {
     }
 
     func setOptions(from lana: Lana) {
+        accessibilityIdentifier = lana.id
         let isColumn = lana.type == .Columns
         axis = isColumn ? .horizontal : .vertical
-        gutter = lana.spacing * ez.screenWidth
-        distribution = isColumn ? .equalSpacing : .fillProportionally
+        gutter = lana.gutter * ez.screenWidth
+        spacing = lana.getSpacing()
+        
+        // Need to figure this part out better
+        distribution = isColumn ? .equalSpacing : .fillEqually
         alignment = lana.alignment ?? .fill
     }
 
@@ -53,14 +60,23 @@ public class TalanaStackView: UIStackView {
         self.removeAllArrangedSubviews()
     }
     
-    public func layout(_ lana: Lana, useLanaSpacing: Bool = false) {
-
+    public func layout(_ lana: Lana) {
         setOptions(from: lana)
-        spacing = useLanaSpacing ? lana.spacing * ez.screenWidth : 0
-
+        
         var temp = self
-        if let children = lana.children {
-            Talana.layout(children, into: &temp)
+        lana.children?.forEach { childLana in
+            var child = Component()
+            
+            if childLana.type == .View {
+                child = childLana.layout()
+            } else {
+                var subTalana = TalanaStackView()
+                subTalana.layout(childLana)
+                
+                child = subTalana
+            }
+
+            Constraint.add(childLana.constraints, toParent: &temp, fromChild: &child)
         }
     }
 }
