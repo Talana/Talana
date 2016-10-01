@@ -1,0 +1,8 @@
+disabled_rules:
+  - variable_name
+  - type_name
+
+excluded:
+  - Talana/SwiftyJson.swift
+
+reporter: "xcode"
