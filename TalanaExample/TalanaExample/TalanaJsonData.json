@@ -1,17 +1,16 @@
 {
-  "workflow": {
-    "title": "Form 1",
-    "nextView": "Ey05wlcK-"
-  },
+  "id": "topParent",
   "type": "rows",
   "spacing": 0.04,
   "children": [
     {
+      "id": "topParent_Row1ColumnParent",
       "type": "columns",
       "alignment": "Top",
       "spacing": 0.04,
       "children": [
         {
+          "id": "Row1ColumnParent_first_view",
           "type": "view",
           "title": "Img",
           "color": "#3498db",
@@ -24,18 +23,43 @@
           ]
         },
         {
+          "id": "Row1ColumnParent_second_rows",
           "type": "rows",
           "spacing": 0.04,
           "children": [
             {
+              "id": "second_rows_view",
               "type": "view",
               "tempTitle":"row1View",
               "color": "#ff9900",
               "constraints": [
                 {
                   "type": "size",
-                  "h": 50,
-                  "col": 6
+                  "h": 45,
+                  "col": 12
+                },
+                {
+                  "type": "margin",
+                  "l": 0,
+                  "r": 0
+                }
+              ]
+            },
+            {
+              "id": "second_rows_view",
+              "type": "view",
+              "tempTitle":"row1View",
+              "color": "#ec3f34",
+              "constraints": [
+                {
+                  "type": "size",
+                  "h": 45,
+                  "col": 12
+                },
+                {
+                  "type": "margin",
+                  "l": 0,
+                  "r": 0
                 }
               ]
             }
@@ -43,7 +67,6 @@
           "constraints": [
             {
               "type": "size",
-              "h": 100,
               "col": 6
             }
           ]

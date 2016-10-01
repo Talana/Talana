@@ -39,11 +39,13 @@ public struct Lana {
             children = childrenViews.map({Lana(json: $0)})
         }
     }
-
+    
     public func layout(into parent: inout TalanaStackView) {
-        if type != .View, let children = children {
-            print("AHHHH!! WE FOUND OUR BUG!!")
-            Talana.layout(children, into: &parent)
+        
+        if type != .View {
+            var childStack = TalanaStackView()
+            childStack.layout(self, useLanaSpacing: true)
+            Constraint.add(constraints, toParent: &parent, fromChild: &childStack)
             return
         }
         var lView = UIView()

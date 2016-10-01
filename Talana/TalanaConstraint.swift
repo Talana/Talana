@@ -43,7 +43,7 @@ public struct Constraint {
         })
     }
 
-    static func add(_ constraint: AttributeTuple, toParent parent: inout TalanaStackView, fromChild child: inout UIView) {
+    static func add<T: UIView>(_ constraint: AttributeTuple, toParent parent: inout TalanaStackView, fromChild child: inout T) {
 
         let isSize = [.height].contains(constraint.attribute)
         var value = CGFloat(constraint.value)
@@ -61,11 +61,11 @@ public struct Constraint {
                     multiplier: multi,
                     constant: value))
     }
-
-    static func add(_ constraints: [Constraint], toParent parent: inout TalanaStackView, fromChild child: inout UIView) {
+    
+    static func add<T: UIView>(_ constraints: [Constraint], toParent parent: inout TalanaStackView, fromChild child: inout T) {
         child.translatesAutoresizingMaskIntoConstraints = false
         parent.addArrangedSubview(child)
-
+        
         constraints.forEach { c in
             c.attributes.forEach() { add($0, toParent: &parent, fromChild: &child) }
         }

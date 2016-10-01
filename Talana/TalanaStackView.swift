@@ -45,7 +45,7 @@ public class TalanaStackView: UIStackView {
         let isColumn = lana.type == .Columns
         axis = isColumn ? .horizontal : .vertical
         gutter = lana.spacing * ez.screenWidth
-        distribution = isColumn ? .equalSpacing : .fillEqually
+        distribution = isColumn ? .equalSpacing : .fillProportionally
         alignment = lana.alignment ?? .fill
     }
 
