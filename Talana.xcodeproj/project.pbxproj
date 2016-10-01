@@ -7,10 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315EA4491D9F3B3800C69190 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4421D9F3B3800C69190 /* Extensions.swift */; };
+		315EA44A1D9F3B3800C69190 /* Lana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4431D9F3B3800C69190 /* Lana.swift */; };
+		315EA44B1D9F3B3800C69190 /* LanaAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4441D9F3B3800C69190 /* LanaAlignment.swift */; };
+		315EA44C1D9F3B3800C69190 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4451D9F3B3800C69190 /* SwiftyJson.swift */; };
+		315EA44D1D9F3B3800C69190 /* Talana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4461D9F3B3800C69190 /* Talana.swift */; };
+		315EA44E1D9F3B3800C69190 /* TalanaConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */; };
+		315EA44F1D9F3B3800C69190 /* TalanaStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4481D9F3B3800C69190 /* TalanaStackView.swift */; };
 		31EA34BC1D9E92C200C12165 /* Talana.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EA34BA1D9E92C200C12165 /* Talana.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		315EA4901D9F3B8E00C69190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 315EA4591D9F3B8D00C69190;
+			remoteInfo = TalanaExample;
+		};
+		315EA4921D9F3B8E00C69190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 315EA46D1D9F3B8D00C69190;
+			remoteInfo = TalanaExampleTests;
+		};
+		315EA4941D9F3B8E00C69190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 315EA4781D9F3B8D00C69190;
+			remoteInfo = TalanaExampleUITests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		315EA4421D9F3B3800C69190 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		315EA4431D9F3B3800C69190 /* Lana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lana.swift; sourceTree = "<group>"; };
+		315EA4441D9F3B3800C69190 /* LanaAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanaAlignment.swift; sourceTree = "<group>"; };
+		315EA4451D9F3B3800C69190 /* SwiftyJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
+		315EA4461D9F3B3800C69190 /* Talana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talana.swift; sourceTree = "<group>"; };
+		315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalanaConstraint.swift; sourceTree = "<group>"; };
+		315EA4481D9F3B3800C69190 /* TalanaStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalanaStackView.swift; sourceTree = "<group>"; };
+		315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TalanaExample.xcodeproj; path = TalanaExample/TalanaExample.xcodeproj; sourceTree = "<group>"; };
 		31EA34B71D9E92C100C12165 /* Talana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Talana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EA34BA1D9E92C200C12165 /* Talana.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Talana.h; sourceTree = "<group>"; };
 		31EA34BB1D9E92C200C12165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,9 +66,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		315EA48B1D9F3B8D00C69190 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				315EA4911D9F3B8E00C69190 /* TalanaExample.app */,
+				315EA4931D9F3B8E00C69190 /* TalanaExampleTests.xctest */,
+				315EA4951D9F3B8E00C69190 /* TalanaExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		315EA4A01D9F40CB00C69190 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31EA34BA1D9E92C200C12165 /* Talana.h */,
+				31EA34BB1D9E92C200C12165 /* Info.plist */,
+				315EA4451D9F3B3800C69190 /* SwiftyJson.swift */,
+				315EA4421D9F3B3800C69190 /* Extensions.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		31EA34AD1D9E92C100C12165 = {
 			isa = PBXGroup;
 			children = (
+				315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */,
 				31EA34B91D9E92C200C12165 /* Talana */,
 				31EA34B81D9E92C100C12165 /* Products */,
 			);
@@ -46,8 +107,12 @@
 		31EA34B91D9E92C200C12165 /* Talana */ = {
 			isa = PBXGroup;
 			children = (
-				31EA34BA1D9E92C200C12165 /* Talana.h */,
-				31EA34BB1D9E92C200C12165 /* Info.plist */,
+				315EA4431D9F3B3800C69190 /* Lana.swift */,
+				315EA4441D9F3B3800C69190 /* LanaAlignment.swift */,
+				315EA4461D9F3B3800C69190 /* Talana.swift */,
+				315EA4471D9F3B3800C69190 /* TalanaConstraint.swift */,
+				315EA4481D9F3B3800C69190 /* TalanaStackView.swift */,
+				315EA4A01D9F40CB00C69190 /* Supporting Files */,
 			);
 			path = Talana;
 			sourceTree = "<group>";
@@ -110,12 +175,42 @@
 			mainGroup = 31EA34AD1D9E92C100C12165;
 			productRefGroup = 31EA34B81D9E92C100C12165 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 315EA48B1D9F3B8D00C69190 /* Products */;
+					ProjectRef = 315EA48A1D9F3B8D00C69190 /* TalanaExample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				31EA34B61D9E92C100C12165 /* Talana */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		315EA4911D9F3B8E00C69190 /* TalanaExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TalanaExample.app;
+			remoteRef = 315EA4901D9F3B8E00C69190 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		315EA4931D9F3B8E00C69190 /* TalanaExampleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TalanaExampleTests.xctest;
+			remoteRef = 315EA4921D9F3B8E00C69190 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		315EA4951D9F3B8E00C69190 /* TalanaExampleUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TalanaExampleUITests.xctest;
+			remoteRef = 315EA4941D9F3B8E00C69190 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		31EA34B51D9E92C100C12165 /* Resources */ = {
@@ -132,6 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315EA44F1D9F3B3800C69190 /* TalanaStackView.swift in Sources */,
+				315EA4491D9F3B3800C69190 /* Extensions.swift in Sources */,
+				315EA44B1D9F3B3800C69190 /* LanaAlignment.swift in Sources */,
+				315EA44A1D9F3B3800C69190 /* Lana.swift in Sources */,
+				315EA44E1D9F3B3800C69190 /* TalanaConstraint.swift in Sources */,
+				315EA44D1D9F3B3800C69190 /* Talana.swift in Sources */,
+				315EA44C1D9F3B3800C69190 /* SwiftyJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +396,7 @@
 				31EA34C11D9E92C200C12165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

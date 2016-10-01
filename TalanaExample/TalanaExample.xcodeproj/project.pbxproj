@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		315EA45D1D9F3B8D00C69190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA45C1D9F3B8D00C69190 /* AppDelegate.swift */; };
+		315EA45F1D9F3B8D00C69190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA45E1D9F3B8D00C69190 /* ViewController.swift */; };
+		315EA4621D9F3B8D00C69190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315EA4601D9F3B8D00C69190 /* Main.storyboard */; };
+		315EA4641D9F3B8D00C69190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 315EA4631D9F3B8D00C69190 /* Assets.xcassets */; };
+		315EA4671D9F3B8D00C69190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315EA4651D9F3B8D00C69190 /* LaunchScreen.storyboard */; };
+		315EA4721D9F3B8D00C69190 /* TalanaExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA4711D9F3B8D00C69190 /* TalanaExampleTests.swift */; };
+		315EA47D1D9F3B8D00C69190 /* TalanaExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315EA47C1D9F3B8D00C69190 /* TalanaExampleUITests.swift */; };
+		315EA4991D9F3C4100C69190 /* TalanaJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 315EA4981D9F3C4100C69190 /* TalanaJsonData.json */; };
+		315EA49C1D9F3D7B00C69190 /* Talana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315EA49B1D9F3D7B00C69190 /* Talana.framework */; };
+		315EA49D1D9F3D7B00C69190 /* Talana.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315EA49B1D9F3D7B00C69190 /* Talana.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		315EA46E1D9F3B8D00C69190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 315EA4511D9F3B8D00C69190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 315EA4581D9F3B8D00C69190;
+			remoteInfo = TalanaExample;
+		};
+		315EA4791D9F3B8D00C69190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 315EA4511D9F3B8D00C69190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 315EA4581D9F3B8D00C69190;
+			remoteInfo = TalanaExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		315EA49E1D9F3D7B00C69190 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				315EA49D1D9F3D7B00C69190 /* Talana.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		315EA4591D9F3B8D00C69190 /* TalanaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalanaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		315EA45C1D9F3B8D00C69190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		315EA45E1D9F3B8D00C69190 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		315EA4611D9F3B8D00C69190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		315EA4631D9F3B8D00C69190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		315EA4661D9F3B8D00C69190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		315EA4681D9F3B8D00C69190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315EA46D1D9F3B8D00C69190 /* TalanaExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalanaExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		315EA4711D9F3B8D00C69190 /* TalanaExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalanaExampleTests.swift; sourceTree = "<group>"; };
+		315EA4731D9F3B8D00C69190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315EA4781D9F3B8D00C69190 /* TalanaExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalanaExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		315EA47C1D9F3B8D00C69190 /* TalanaExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalanaExampleUITests.swift; sourceTree = "<group>"; };
+		315EA47E1D9F3B8D00C69190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315EA4981D9F3C4100C69190 /* TalanaJsonData.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = text.json; path = TalanaJsonData.json; sourceTree = "<group>"; tabWidth = 1; usesTabs = 1; wrapsLines = 0; };
+		315EA49B1D9F3D7B00C69190 /* Talana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Talana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		315EA4561D9F3B8D00C69190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EA49C1D9F3D7B00C69190 /* Talana.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA46A1D9F3B8D00C69190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA4751D9F3B8D00C69190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		315EA4501D9F3B8D00C69190 = {
+			isa = PBXGroup;
+			children = (
+				315EA49B1D9F3D7B00C69190 /* Talana.framework */,
+				315EA45B1D9F3B8D00C69190 /* TalanaExample */,
+				315EA4701D9F3B8D00C69190 /* TalanaExampleTests */,
+				315EA47B1D9F3B8D00C69190 /* TalanaExampleUITests */,
+				315EA45A1D9F3B8D00C69190 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		315EA45A1D9F3B8D00C69190 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				315EA4591D9F3B8D00C69190 /* TalanaExample.app */,
+				315EA46D1D9F3B8D00C69190 /* TalanaExampleTests.xctest */,
+				315EA4781D9F3B8D00C69190 /* TalanaExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		315EA45B1D9F3B8D00C69190 /* TalanaExample */ = {
+			isa = PBXGroup;
+			children = (
+				315EA4981D9F3C4100C69190 /* TalanaJsonData.json */,
+				315EA45E1D9F3B8D00C69190 /* ViewController.swift */,
+				315EA4601D9F3B8D00C69190 /* Main.storyboard */,
+				315EA49A1D9F3CCF00C69190 /* Supporting Files */,
+			);
+			path = TalanaExample;
+			sourceTree = "<group>";
+		};
+		315EA4701D9F3B8D00C69190 /* TalanaExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				315EA4711D9F3B8D00C69190 /* TalanaExampleTests.swift */,
+				315EA4731D9F3B8D00C69190 /* Info.plist */,
+			);
+			path = TalanaExampleTests;
+			sourceTree = "<group>";
+		};
+		315EA47B1D9F3B8D00C69190 /* TalanaExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				315EA47C1D9F3B8D00C69190 /* TalanaExampleUITests.swift */,
+				315EA47E1D9F3B8D00C69190 /* Info.plist */,
+			);
+			path = TalanaExampleUITests;
+			sourceTree = "<group>";
+		};
+		315EA49A1D9F3CCF00C69190 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				315EA45C1D9F3B8D00C69190 /* AppDelegate.swift */,
+				315EA4631D9F3B8D00C69190 /* Assets.xcassets */,
+				315EA4651D9F3B8D00C69190 /* LaunchScreen.storyboard */,
+				315EA4681D9F3B8D00C69190 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		315EA4581D9F3B8D00C69190 /* TalanaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315EA4811D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExample" */;
+			buildPhases = (
+				315EA4551D9F3B8D00C69190 /* Sources */,
+				315EA4561D9F3B8D00C69190 /* Frameworks */,
+				315EA4571D9F3B8D00C69190 /* Resources */,
+				315EA49E1D9F3D7B00C69190 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalanaExample;
+			productName = TalanaExample;
+			productReference = 315EA4591D9F3B8D00C69190 /* TalanaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		315EA46C1D9F3B8D00C69190 /* TalanaExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315EA4841D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExampleTests" */;
+			buildPhases = (
+				315EA4691D9F3B8D00C69190 /* Sources */,
+				315EA46A1D9F3B8D00C69190 /* Frameworks */,
+				315EA46B1D9F3B8D00C69190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				315EA46F1D9F3B8D00C69190 /* PBXTargetDependency */,
+			);
+			name = TalanaExampleTests;
+			productName = TalanaExampleTests;
+			productReference = 315EA46D1D9F3B8D00C69190 /* TalanaExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		315EA4771D9F3B8D00C69190 /* TalanaExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315EA4871D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExampleUITests" */;
+			buildPhases = (
+				315EA4741D9F3B8D00C69190 /* Sources */,
+				315EA4751D9F3B8D00C69190 /* Frameworks */,
+				315EA4761D9F3B8D00C69190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				315EA47A1D9F3B8D00C69190 /* PBXTargetDependency */,
+			);
+			name = TalanaExampleUITests;
+			productName = TalanaExampleUITests;
+			productReference = 315EA4781D9F3B8D00C69190 /* TalanaExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		315EA4511D9F3B8D00C69190 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Fabian Buentello";
+				TargetAttributes = {
+					315EA4581D9F3B8D00C69190 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = H367AL682C;
+						ProvisioningStyle = Automatic;
+					};
+					315EA46C1D9F3B8D00C69190 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = H367AL682C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 315EA4581D9F3B8D00C69190;
+					};
+					315EA4771D9F3B8D00C69190 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = H367AL682C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 315EA4581D9F3B8D00C69190;
+					};
+				};
+			};
+			buildConfigurationList = 315EA4541D9F3B8D00C69190 /* Build configuration list for PBXProject "TalanaExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 315EA4501D9F3B8D00C69190;
+			productRefGroup = 315EA45A1D9F3B8D00C69190 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				315EA4581D9F3B8D00C69190 /* TalanaExample */,
+				315EA46C1D9F3B8D00C69190 /* TalanaExampleTests */,
+				315EA4771D9F3B8D00C69190 /* TalanaExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		315EA4571D9F3B8D00C69190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EA4991D9F3C4100C69190 /* TalanaJsonData.json in Resources */,
+				315EA4671D9F3B8D00C69190 /* LaunchScreen.storyboard in Resources */,
+				315EA4641D9F3B8D00C69190 /* Assets.xcassets in Resources */,
+				315EA4621D9F3B8D00C69190 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA46B1D9F3B8D00C69190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA4761D9F3B8D00C69190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		315EA4551D9F3B8D00C69190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EA45F1D9F3B8D00C69190 /* ViewController.swift in Sources */,
+				315EA45D1D9F3B8D00C69190 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA4691D9F3B8D00C69190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EA4721D9F3B8D00C69190 /* TalanaExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315EA4741D9F3B8D00C69190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EA47D1D9F3B8D00C69190 /* TalanaExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		315EA46F1D9F3B8D00C69190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 315EA4581D9F3B8D00C69190 /* TalanaExample */;
+			targetProxy = 315EA46E1D9F3B8D00C69190 /* PBXContainerItemProxy */;
+		};
+		315EA47A1D9F3B8D00C69190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 315EA4581D9F3B8D00C69190 /* TalanaExample */;
+			targetProxy = 315EA4791D9F3B8D00C69190 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		315EA4601D9F3B8D00C69190 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				315EA4611D9F3B8D00C69190 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		315EA4651D9F3B8D00C69190 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				315EA4661D9F3B8D00C69190 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		315EA47F1D9F3B8D00C69190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		315EA4801D9F3B8D00C69190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		315EA4821D9F3B8D00C69190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		315EA4831D9F3B8D00C69190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		315EA4851D9F3B8D00C69190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalanaExample.app/TalanaExample";
+			};
+			name = Debug;
+		};
+		315EA4861D9F3B8D00C69190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalanaExample.app/TalanaExample";
+			};
+			name = Release;
+		};
+		315EA4881D9F3B8D00C69190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TalanaExample;
+			};
+			name = Debug;
+		};
+		315EA4891D9F3B8D00C69190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = H367AL682C;
+				INFOPLIST_FILE = TalanaExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buentello.TalanaExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TalanaExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		315EA4541D9F3B8D00C69190 /* Build configuration list for PBXProject "TalanaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				315EA47F1D9F3B8D00C69190 /* Debug */,
+				315EA4801D9F3B8D00C69190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		315EA4811D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				315EA4821D9F3B8D00C69190 /* Debug */,
+				315EA4831D9F3B8D00C69190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		315EA4841D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				315EA4851D9F3B8D00C69190 /* Debug */,
+				315EA4861D9F3B8D00C69190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		315EA4871D9F3B8D00C69190 /* Build configuration list for PBXNativeTarget "TalanaExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				315EA4881D9F3B8D00C69190 /* Debug */,
+				315EA4891D9F3B8D00C69190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 315EA4511D9F3B8D00C69190 /* Project object */;
+}

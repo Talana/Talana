@@ -1,0 +1,60 @@
+{
+  "workflow": {
+    "title": "Form 1",
+    "nextView": "Ey05wlcK-"
+  },
+  "type": "rows",
+  "spacing": 0.04,
+  "children": [
+    {
+      "type": "columns",
+      "alignment": "Top",
+      "spacing": 0.04,
+      "children": [
+        {
+          "type": "view",
+          "title": "Img",
+          "color": "#3498db",
+          "constraints": [
+            {
+              "type": "size",
+              "h": 100,
+              "col": 6
+            }
+          ]
+        },
+        {
+          "type": "rows",
+          "spacing": 0.04,
+          "children": [
+            {
+              "type": "view",
+              "tempTitle":"row1View",
+              "color": "#ff9900",
+              "constraints": [
+                {
+                  "type": "size",
+                  "h": 50,
+                  "col": 6
+                }
+              ]
+            }
+          ],
+          "constraints": [
+            {
+              "type": "size",
+              "h": 100,
+              "col": 6
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "type": "size",
+          "col": 12
+        }
+      ]
+    }
+  ]
+}
