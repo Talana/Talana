@@ -9,53 +9,87 @@
 import UIKit
 
 enum LanaType: String {
-    case Columns = "columns"
-    case Rows = "rows"
+    
+    /// Component that will contain other components in columns
+    case Columns = "column"
+    
+    /// Component that will contain other components in rows
+    case Rows = "row"
+    
+    /// Component that will be displayed on the view
     case View = "view"
 }
 
+
+/// Lana object that contains all the component information for itself and children
 public struct Lana {
 
+    /// Identifier for `Lana`. Useful if Lana has breaking constraints
+    var id: String?
+    
+    /// Raw Json for object
     var viewJson: JSON
+    
+    /// `LanaType` object that determines if `Lana` is a `.Column`, `.Row`, `.View`
     var type: LanaType?
-    var spacing: CGFloat = 0
+    
+    /// Spacing inbetween it's children components. Does not get used if it's `type` is `.View`
+    var gutter: CGFloat = 0.02
+    
+    /// background color for Component
     var backgroundColor: UIColor?
+    
+    /// Constraints that belong to `Lana` object
     var constraints: [Constraint]
+    
+    /// Children of `Lana` Object.
     var children: [Lana]?
+    
+    /// Alignment for `Lana` Object. Does not get used if it's `type` is `.View`
     var alignment: UIStackViewAlignment?
 
     public init(json: JSON) {
         viewJson = json
+        id = json["id"].string
         type = LanaType(rawValue: json["type"].stringValue)
 
-        spacing = CGFloat(json["spacing"].floatValue)
-        constraints = json["constraints"].arrayValue.flatMap({Constraint(json: $0)})
+        if let _gutter = json["gutter"].float {
+            gutter = CGFloat(_gutter)
+        }
         alignment = LanaAlignment(rawValue: json["alignment"].stringValue)?.value()
-        if let color = json["color"].string {
-            backgroundColor = UIColor(hexString: color)
-        }
-
-        if let childrenViews = json["children"].array {
-            children = childrenViews.map({Lana(json: $0)})
-        }
+        constraints = json["constraints"].arrayValue.flatMap(Constraint.init)
+        backgroundColor = json["background-color"].string.flatMap { UIColor(hexString: $0) }
+        children = json["children"].array?.flatMap(Lana.init)
     }
     
-    public func layout(into parent: inout TalanaStackView) {
+    
+    /// Get spacing inbetween `Components`
+    ///
+    /// - returns: Value inbetween child `Components`
+    public func getSpacing() -> CGFloat {
+        if type == .Columns {
+            return 0
+        }
+        
+        return gutter * ez.screenWidth
+    }
+    
+    /// Receive the `Component` for a `Lana`
+    ///
+    /// - returns: `Component`
+    public func layout() -> Component {
+        
+        var child = Component()
+        child.accessibilityIdentifier = id
+        child.backgroundColor = backgroundColor
         
         if type != .View {
             var childStack = TalanaStackView()
-            childStack.layout(self, useLanaSpacing: true)
-            Constraint.add(constraints, toParent: &parent, fromChild: &childStack)
-            return
+            childStack.layout(self)
+            
+            child = childStack
         }
-        var lView = UIView()
-        lView.backgroundColor = backgroundColor
-        Constraint.add(constraints, toParent: &parent, fromChild: &lView)
-    }
-
-    public func layoutChildren(into parent: inout TalanaStackView) {
-        children?.forEach({ cTalana in
-            cTalana.layout(into: &parent)
-        })
+        
+        return child
     }
 }

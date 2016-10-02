@@ -1,19 +1,18 @@
 {
   "id": "topParent",
   "type": "rows",
-  "spacing": 0.04,
+  "gutter": 0.03,
   "children": [
     {
       "id": "topParent_Row1ColumnParent",
-      "type": "columns",
+      "type": "column",
       "alignment": "Top",
-      "spacing": 0.04,
       "children": [
         {
           "id": "Row1ColumnParent_first_view",
           "type": "view",
           "title": "Img",
-          "color": "#3498db",
+          "background-color": "#3498db",
           "constraints": [
             {
               "type": "size",
@@ -24,42 +23,39 @@
         },
         {
           "id": "Row1ColumnParent_second_rows",
-          "type": "rows",
-          "spacing": 0.04,
+          "type": "row",
+          "color": "#9b59b6",
+          "gutter": 0.01,
           "children": [
             {
               "id": "second_rows_view",
               "type": "view",
-              "tempTitle":"row1View",
-              "color": "#ff9900",
+              "temp-title": "row1View",
+              "background-color": "#ff9900",
               "constraints": [
                 {
                   "type": "size",
-                  "h": 45,
                   "col": 12
                 },
                 {
                   "type": "margin",
-                  "l": 0,
-                  "r": 0
+                  "t": 0
                 }
               ]
             },
             {
               "id": "second_rows_view",
               "type": "view",
-              "tempTitle":"row1View",
-              "color": "#ec3f34",
+              "temp-title": "row1View",
+              "background-color": "#ec3f34",
               "constraints": [
                 {
                   "type": "size",
-                  "h": 45,
                   "col": 12
                 },
                 {
                   "type": "margin",
-                  "l": 0,
-                  "r": 0
+                  "b": 0
                 }
               ]
             }
@@ -67,7 +63,8 @@
           "constraints": [
             {
               "type": "size",
-              "col": 6
+              "col": 6,
+              "h": 100
             }
           ]
         }
@@ -78,6 +75,85 @@
           "col": 12
         }
       ]
+    },
+    {
+      "id": "topParent_Row1ColumnParent",
+      "type": "column",
+      "alignment": "Top",
+      "children": [
+        {
+          "id": "Row1ColumnParent_first_view",
+          "type": "view",
+          "title": "Img",
+          "background-color": "#3498db",
+          "constraints": [
+            {
+              "type": "size",
+              "h": 100,
+              "col": 6
+            }
+          ]
+        },
+        {
+          "id": "Row1ColumnParent_second_rows",
+          "type": "row",
+          "color": "#9b59b6",
+          "gutter": 0.01,
+          "children": [
+            {
+              "id": "second_rows_view",
+              "type": "view",
+              "temp-title": "row1View",
+              "background-color": "#ff9900",
+              "constraints": [
+                {
+                  "type": "size",
+                  "col": 12
+                },
+                {
+                  "type": "margin",
+                  "t": 0
+                }
+              ]
+            },
+            {
+              "id": "second_rows_view",
+              "type": "view",
+              "temp-title": "row1View",
+              "background-color": "#ec3f34",
+              "constraints": [
+                {
+                  "type": "size",
+                  "col": 12
+                },
+                {
+                  "type": "margin",
+                  "b": 0
+                }
+              ]
+            }
+          ],
+          "constraints": [
+            {
+              "type": "size",
+              "col": 6,
+              "h": 100
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "type": "size",
+          "col": 12
+        }
+      ]
+    }
+  ],
+  "constraints":[
+    {
+      "type": "size",
+      "h": 200
     }
   ]
 }

@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             let data = NSData(contentsOf: fileUrl) {
             let jsonData = JSON(data: data as Data)
             let lana = Lana(json: jsonData)
-            lanaStackView.layout(lana, useLanaSpacing: true)
+            lanaStackView.layout(lana)
         }
     }
     

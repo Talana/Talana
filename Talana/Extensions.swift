@@ -1,17 +1,11 @@
 import UIKit
 
-extension UIView {
-    public convenience init(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat) {
-        self.init(frame: CGRect(x: x, y: y, width: w, height: h))
-    }
-}
-
 extension CGFloat {
     func columns(in lanaStack: TalanaStackView) -> CGFloat {
-        let colTotal = self * lanaStack.lanaCol
+        let colTotal = self * lanaStack.columnWidth
         let gutterTotal = (self - 1) * lanaStack.gutter
         
-        return (colTotal + gutterTotal)/lanaStack.stackWidth
+        return (colTotal + gutterTotal)/lanaStack.width
     }
 }
 
